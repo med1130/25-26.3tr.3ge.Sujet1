@@ -170,7 +170,7 @@
         <h1 class="neon-text">مرحباً بكم أعزائي التلاميذ</h1>
         <div>
             <p class="description"> يمكنكم تحميل التصحيح النموذجي كاملاً بصيغة PDF</p>
-            <a href="https://drive.google.com/file/d/1VRGy9W1X0hs9dMoBfNazFyQXPjcOioRq/view?usp=sharing" class="solution-btn">تحميل التصحيح النموذجي</a>
+            <a href="https://drive.google.com/file/d/1t5Xw2tA0gWd0wX11xM9Ju8_dcjBgSwZ_/view?usp=drivesdk" class="solution-btn">تحميل التصحيح النموذجي</a>
             <p class="wish-msg">مع تمنياتنا لكم بالتفوق والنجاح المستمر</p>
         </div>
     </div>
@@ -179,7 +179,6 @@
         // --- إعدادات الوقت ---
         // حدد موعد انتهاء الامتحان هنا
         const examEndTime = new Date(2026,4,5,12,30,0).getTime();
-        console.log(examEndTime);
 
         const timer = setInterval(() => {
             const now = new Date().getTime();
@@ -192,7 +191,7 @@
                 return;
             }
 
-            const h = Math.floor((diff / (1000 * 60 * 60));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const s = Math.floor((diff % (1000 * 60)) / 1000);
 
